@@ -1,0 +1,56 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.cta_button {
+	text-decoration: none;
+	color: #000;
+	position: relative;
+	padding: 10px;
+	transition: all 0.5s ease;
+}
+
+.cta_button::before {
+	content: '';
+	position: absolute;
+	width: 56px;
+	height: 56px;
+	background: rgba(255, 0, 0, 0.5);
+	opacity: 0.5;
+	display: block;
+	border-radius: 28px;
+	top: -10px;
+	left: -5px;
+	transition: all 0.5s ease;
+}
+
+span {
+	font-size: 24px;
+	line-height: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+		'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	letter-spacing: 0.25em;
+}
+
+svg {
+	position: relative;
+	fill: none;
+	stroke-width: 2px;
+	stroke: #111;
+	transform: translateX(-5px);
+	transition: all 0.5s ease;
+}
+
+.cta_button:hover::before {
+	width: 100%;
+	background: rgba(255, 0, 0, 1);
+}
+
+.cta_button:hover svg {
+	transform: translateX(0);
+}
