@@ -1,0 +1,107 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.faq-accordion {
+	position: relative;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.faq-accordion .faq-items {
+	border-bottom: 1px solid gray;
+	margin-bottom: 10px;
+}
+
+.faq-accordion button {
+	width: 100%;
+	display: block;
+	background: none;
+	text-align: left;
+	padding: 10px 10px 10px 0;
+	outline: none;
+	border: none;
+	font-size: 16px;
+	font-weight: 500;
+	transition: all 0.5s ease;
+}
+
+.faq-accordion .faq-question {
+	padding: 10px 10px 10px 0;
+}
+
+.icon {
+	display: inline-block;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	border-radius: 22px;
+	border: 1px solid black;
+	right: 0;
+}
+
+.icon::before {
+	content: '';
+	width: 10px;
+	height: 2px;
+	position: absolute;
+	background-color: black;
+	top: 10px;
+	left: 5px;
+}
+
+.icon::after {
+	content: '';
+	width: 2px;
+	height: 10px;
+	position: absolute;
+	left: 9px;
+	top: 6px;
+	background-color: black;
+}
+
+.faq-answer {
+	opacity: 0;
+	max-height: 0;
+	transition: all 0.5s ease-in;
+}
+
+button[aria-expanded='true'] + .faq-answer {
+	opacity: 1;
+	max-height: 9em;
+	transition: all 0.5s ease-in-out;
+	margin: 10px 0;
+}
+
+button[aria-expanded='true'] .icon::after {
+	content: '';
+	width: 0;
+}
+
+button:hover,
+button:focus {
+	color: skyblue;
+	cursor: pointer;
+}
+
+button:hover::after,
+button:focus::after {
+	color: skyblue;
+	cursor: pointer;
+	border: 1px solid skyblue;
+}
+button[aria-expanded='true'] {
+	border-bottom: 1px solid skyblue;
+}
