@@ -1,0 +1,68 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+.tipCalculatorWrapper {
+	width: 50%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	height: 40%;
+	display: flex;
+}
+
+.tipInputSection,
+.resultSection {
+	flex: 1;
+}
+
+.resultSection {
+	background-color: teal;
+	height: 100%;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	padding-left: 20px;
+}
+.result-row {
+	padding-top: 20px;
+}
+
+.tipInputSection {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.inputGroup {
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-bottom: 10px;
+}
+input[type='number'] {
+	padding: 8px;
+	margin-top: 5px;
+}
+input[type='radio'] {
+	margin-bottom: 5px;
+}
+
+#customTip {
+	display: none;
+}

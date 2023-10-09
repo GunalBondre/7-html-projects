@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Tip Calculator app</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Tip Calculator</h1>
+			<div class="tipCalculatorWrapper">
+				<div class="tipInputSection">
+					<div class="inputGroup">
+						<label for="bill">Bill:</label>
+						<input type="number" name="bill" id="bill" />
+					</div>
+					<div class="inputGroup">
+						<label for="tip">Tip Percentage</label>
+						<div id="tipPercentage">
+							<input type="radio" name="tip" id="tip5" value="5" /><label
+								for="tip5"
+								>5%</label
+							>
+							<input type="radio" name="tip" id="tip10" value="10" /><label
+								for="tip10"
+								>10%</label
+							>
+							<input type="radio" name="tip" id="tip15" value="15" /><label
+								for="tip15"
+								>15%</label
+							>
+							<input type="radio" name="tip" id="tip20" value="20" /><label
+								for="tip20"
+								>20%</label
+							>
+							<input type="radio" name="tip" id="custom" value="custom" /><label
+								for="custom"
+								>Custom</label
+							>
+							<input
+								type="number"
+								name="customTip"
+								id="customTip"
+								placeholder="custom%"
+							/>
+						</div>
+					</div>
+					<div class="inputGroup">
+						<label for="numOfPeople"> Number of people</label>
+						<input
+							type="number"
+							name="number_of_people"
+							id="number_of_people"
+						/>
+					</div>
+				</div>
+				<div class="resultSection">
+					<div class="result-row">
+						<div class="result-label">Tip per person</div>
+						<div class="result" id="tipResult">$0.00</div>
+					</div>
+
+					<div class="result-row">
+						<div class="result-label">Total per person</div>
+						<div class="result" id="totalResult">$0.00</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
