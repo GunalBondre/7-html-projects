@@ -50,7 +50,3 @@ svg {
 	width: 100%;
 	background: rgba(255, 0, 0, 1);
 }
-
-.cta_button:hover svg {
-	transform: translateX(0);
-}
